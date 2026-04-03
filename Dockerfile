@@ -6,6 +6,8 @@ RUN ls
 
 ENV APP_HOME /usr/src/app
 
+RUN mkdir -p $APP_HOME
+
 COPY app/*.jar $APP_HOME/app.jar
 
 WORKDIR $APP_HOME
